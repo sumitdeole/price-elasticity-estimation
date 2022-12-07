@@ -11,6 +11,11 @@ Many goods we consume are considered elastic, i.e., their demand goes up (down) 
 
 ## **The What**
 We refer to Kathryn Graddy's insightful research [[1]](#1) and employ her data, as shared by Matt Birch.[[2]](#2) 
+
+$$ \log{}Quantity = \beta_0 + \beta_1\log{}Price + \epsilon$$
+
+$$e = \frac{dQ / Q}{dP / P}$$
+
 ## **The How**
 
 
