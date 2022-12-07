@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from linearmodels import IV2SLS
 
-with open('Fulton_fish_market_data.txt') as infile:
+with open('Fulton_fish_market_dataset.txt') as infile:
     # Read space-delimited file and replace all empty spaces by commas
     data = infile.read().replace(' ', ',')
     # Write the CSV data in the output file
