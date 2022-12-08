@@ -13,22 +13,12 @@ Many goods we consume are considered elastic, i.e., their demand goes up (down) 
 For example, luxury clothing and electronics consumption often react to price changes and hence are price 
 elastic. In comparison, the consumption of food/medicines may not respond to price changes, so is considered price 
 inelastic. Interestingly, it is noteworthy that not all consumer electronics are price elastic; e.g., consumer 
-loyalty of iPhone users makes their demand price inelastic. This underscores the importance of giving special 
-attention to separately estimating the price elasticities of different products. 
+loyalty of iPhone users is well known and makes the demand of iPhones price inelastic. This underscores the 
+importance of giving special attention to separately estimating the price elasticities of different products. 
 
-### Why causal inference matters
+### Why causal estimate of the price elasticity is needed?
 
-<<<<<<< HEAD
-=======
 
-## **The What**
-We refer to Kathryn Graddy's insightful research [[1]](#1) and employ her data, as shared by Matt Birch.[[2]](#2) 
-
-$$ \log{}Quantity = \beta_0 + \beta_1\log{}Price + \epsilon$$
-
-$$e = \frac{dQ / Q}{dP / P}$$
-
->>>>>>> a4f829d62d2c47236d55425b5080d7851802027d
 ## **The How**
 We refer to Kathryn Graddy's insightful research article to continue our investigation of the price elasticity of 
 demand [[1]](#1). We employ the cleaned version of her dataset shared on her homepage.[[2]](#2) 
