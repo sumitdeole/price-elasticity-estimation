@@ -18,6 +18,17 @@ attention to separately estimating the price elasticities of different products.
 
 ### Why causal inference matters
 
+<<<<<<< HEAD
+=======
+
+## **The What**
+We refer to Kathryn Graddy's insightful research [[1]](#1) and employ her data, as shared by Matt Birch.[[2]](#2) 
+
+$$ \log{}Quantity = \beta_0 + \beta_1\log{}Price + \epsilon$$
+
+$$e = \frac{dQ / Q}{dP / P}$$
+
+>>>>>>> a4f829d62d2c47236d55425b5080d7851802027d
 ## **The How**
 We refer to Kathryn Graddy's insightful research article to continue our investigation of the price elasticity of 
 demand [[1]](#1). We employ the cleaned version of her dataset shared on her homepage.[[2]](#2) 
