@@ -1,11 +1,7 @@
 # Fulton fish market and the price elasticity of demand
 
 ## **The Why**
-Price elasticities inform us how much a price increase (or decrease) will impact the demand for a product. With 
-attractive price-setting forming an essential component of the growth strategy of e-commerce companies (Amazon, 
-Zalando, BestSecret, etc.), a clean estimation of the price elasticities of their products is often considered vital 
-for their existence. While these companies can easily employ valuable customer datasets for such an exercise, we 
-will use a freely available dataset to revisit fundamental concepts.
+With attractive price-setting at the front of their growth strategy, major eCommerce companies (Amazon, Zalando, BestSecret, etc.) consider a clean estimation of the price elasticities of their products *vital*. The price elasticity of demand informs us how much a price increase (or decrease) will impact the demand for a product. While these companies employ valuable customer datasets for the estimation of the price elasticities of their products, in this exercise, we will use a freely available dataset to revisit fundamental concepts and present a causal estimate of the price elasticity.
 
 
 Lets first quickly see why price elasticity matters?
@@ -36,7 +32,7 @@ $$ \log{}Quantity = \beta_0 + e\log{}(Price) + \epsilon$$
 ### Endogeneity concerns
 The price elasticity of demand ($e$) estimated above suffers from what economists call endogeneity, which comes in the way of interpreting $e$ causally. The endogeneity problem arises when the explanatory variable, in our case $Price$, is correlated with the error term $\epsilon$. 
 
-There are broadly three reasons why the endogeneity issue arises: 1. omitted variables bias, 2. measurement error, 3. and simultaneity. For more information on the sources of endogeneity in price elasticity of demand estimation, please see the influential research by [Angrist and Krueger](https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.15.4.69). 
+There are broadly three reasons why the endogeneity issue arises: 1. omitted variables bias, 2. measurement error, 3. and simultaneity. For more information on the sources of endogeneity in price elasticity of demand estimation, please see the influential research by [Angrist and Krueger](https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.15.4.69).[[4]](#4) 
 
 ### Potential sources of endogeneity
 In the context of eCommerce, we can readily imagine the following two sources that can make $Price$ endogenous:
@@ -49,7 +45,7 @@ While many advanced machine learning models are available and relatively easy to
 We use an instrumental variable (IV), a third variable, in the regression analysis when we have endogenous variables, e.g., $Price$. 
 Among others, two main conditions need to be met for the IV to help us identify the causal influence of $Price$ on $Quantity$. 
 1. The IV is highly correlated with the endogenous variable --> see first-stage regression.
-2. The IV is uncorrelated with the error term $/epsilon$ and affects the dependent variable ($Quantity$) only through its influence on the endogenous variable --> no formal tests exist to demonstrate that this condition is met.
+2. The IV is uncorrelated with the error term $\epsilon$ and affects the dependent variable ($Quantity$) only through its influence on the endogenous variable --> no formal tests exist to demonstrate that this condition is met.
 
 
 ## References
@@ -63,3 +59,8 @@ https://www.kathryngraddy.org/research#pubdata
 
 <a id="3">[3]</a> 
 Youtube discussion: https://youtu.be/fpZC_tEfnLM
+
+<a id="4">[4]</a> 
+Angrist, JD and AB Krueger
+Instrumental Variables and the Search for Identification: From Supply and Demand to Natural Experiments
+Journal of Economic Perspectives, 15 (4), 69–85
