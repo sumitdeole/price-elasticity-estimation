@@ -23,7 +23,7 @@ Mathematically speaking, the price elasticity of demand is simply a derivative o
 
 $$e = \frac{dQ / Q}{dP / P}$$
 
-In regression analysis, $e$ is often estimated using the log-log linear regression model of the $Price-Quantity$ relationship. That is, the price elasticity of demand ($e$) is simply the coefficient of the variable $log(Price)$, as shown below:
+In regression analysis, $e$ is often estimated using the log-log linear regression model of the $Price-Quantity$ relationship. That is, the price elasticity of demand ($$e$$) is simply the coefficient of the variable $log(Price)$, as shown below:
 
 $$ \log{}Quantity = \beta_0 + e\log{}(Price) + \epsilon$$
 
@@ -48,7 +48,7 @@ Among others, two main conditions need to be met for the IV to help us identify 
 The estimation takes place in two steps:
 1. First, we regress the IV variable on the endogenous regressor.  
 
-$$ \log{}Price = \alpha_0 + \alpha_0(IV) + u$$
+$$ \log{}Price = \alpha_0 + \alpha_1(IV) + u$$
 
 We obtain the predicted $Price$ from this regression, denoted as $\hat{Price}$.
 
