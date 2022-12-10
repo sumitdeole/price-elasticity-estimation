@@ -26,7 +26,7 @@ loyalty of iPhone users is well known and makes the demand of iPhones price inel
 importance of giving special attention to separately estimating the price elasticities of different products. 
 
 ### Why causal estimate of the price elasticity is needed?
-
+**More info will be added later**
 
 ## **The How**
 While many advanced machine learning models for causal inference are readily available and relatively easy to implement, we will address the potential concern of endogeneity in $Price$ with the help of the IV technique. The choice of IV technique is largely driven by the ease of data access and is limited to demonstrating the methodology's main artifacts and implementation. For more information on the discussion and description of the variables and methodology shown here, please see the original article by Kathryn Graddy and compare your observations (it will be an excellent replication exercise).[[1]](#1). A cleaned version of her dataset is accessible on her homepage.[[2]](#2) 
