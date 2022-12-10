@@ -1,5 +1,4 @@
 # A causal estimate of the price elasticity of demand: Theory and practice
-
 With attractive price-setting at the front of their growth strategy, major eCommerce companies (Amazon, Zalando, BestSecret, etc.) consider a clean estimation of the price elasticities of their products *vital*. The price elasticity of demand informs us how much a price increase (or decrease) will impact the demand for a product. While these companies employ valuable customer datasets to estimate the price elasticities of their products, in this exercise, we will use a freely available dataset to revisit fundamental concepts and present a causal estimate of the price elasticity.
 
 ### **Fish market and Amazon**
@@ -42,7 +41,7 @@ In regression analysis, *e* is often estimated using the log-log linear regressi
 $$ \log{}Quantity = \beta_0 + e\log{}(Price) + \epsilon$$
 
 ### Endogeneity concerns
-However, the *e* estimated above suffers from what economists call endogeneity, which comes in the way of interpreting $e$ causally. The endogeneity problem arises when the explanatory variable, in our case $Price$, is correlated with the error term $\epsilon$. There are broadly three reasons why the endogeneity issue arises: 1. omitted variables bias, 2. measurement error, 3. and simultaneity. For more information on the sources of endogeneity in price elasticity of demand estimation, please see the influential research by [Angrist and Krueger](https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.15.4.69).[[3]](#3) 
+However, the *e* estimated above suffers from bias due to what economists call the endogeneity problem, which comes in the way of interpreting $e$ causally. The endogeneity problem arises when the explanatory variable, in our case $Price$, is correlated with the error term $\epsilon$. There are broadly three reasons why the endogeneity issue arises: 1. omitted variables bias, 2. measurement error, 3. and simultaneity. For more information on the sources of endogeneity in price elasticity of demand estimation, please see the influential research by [Angrist and Krueger](https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.15.4.69).[[3]](#3) 
 
 In the context of eCommerce, we can readily imagine the following two sources that can make $Price$ endogenous:
 - **Seasonality:** The demand and supply of many products differ by season. Many products are sold at lower prices during off-seasons (demand is also low) and are sold at higher prices during holiday seasons, e.g., Christmas (high demand). To this end, this seasonality of the product market is a *confounder* that intervenes in the relationship of interest.
