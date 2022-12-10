@@ -1,4 +1,4 @@
-# A causal estimate of the price elasticity of demand
+# A causal estimate of the price elasticity of demand: Theory and practice
 
 With attractive price-setting at the front of their growth strategy, major eCommerce companies (Amazon, Zalando, BestSecret, etc.) consider a clean estimation of the price elasticities of their products *vital*. The price elasticity of demand informs us how much a price increase (or decrease) will impact the demand for a product. While these companies employ valuable customer datasets to estimate the price elasticities of their products, in this exercise, we will use a freely available dataset to revisit fundamental concepts and present a causal estimate of the price elasticity.
 
