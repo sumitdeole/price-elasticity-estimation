@@ -71,7 +71,7 @@ $$ \log{}Quantity = \gamma_0 + e_c\log{}(\hat{Price}) + v$$
 
 >> The $e_c$ in the above equation is our causal estimate of the price elasticity of demand.
 
-We install the Python library *linearmodels* (IV2SLS module) that performs both these steps using a single command. For its implementation, 
+We install the Python library *linearmodels* (IV2SLS module) that performs both these steps using a single command. For its implementation using Python, *see* [code_price_elasticity.ipynb](https://github.com/sumitdeole/price_elasticity/blob/main/code_price_elasticity.ipynb)
 
 
 ## References
