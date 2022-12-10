@@ -42,20 +42,17 @@ $$ \log{}Quantity = \beta_0 + e\log{}(Price) + \epsilon$$
 
 ### Endogeneity concerns
 However, the *e* estimated above suffers from bias due to what economists call the endogeneity problem, which comes in the way of interpreting $e$ causally. The endogeneity problem arises when the explanatory variable, in our case $Price$, is correlated with the error term $\epsilon$. There are broadly three reasons why the endogeneity issue arises: 1. omitted variables bias, 2. measurement error, 3. and simultaneity. For more information on the sources of endogeneity in price elasticity of demand estimation, please see the influential research by [Angrist and Krueger](https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.15.4.69).[[3]](#3) 
-
 In the context of eCommerce, we can readily imagine the following two sources that can make $Price$ endogenous:
 - **Seasonality:** The demand and supply of many products differ by season. Many products are sold at lower prices during off-seasons (demand is also low) and are sold at higher prices during holiday seasons, e.g., Christmas (high demand). To this end, this seasonality of the product market is a *confounder* that intervenes in the relationship of interest.
 - **Product quality**: Product quality is another confounder that can determine $Price$ and the $Quantity$ sold of the product. For example, iPhones are generally assumed to have higher quality than Android phones. To this end, iPhones are also sold in higher quantities and at higher prices than many Android phones. A simple analysis of the retailer sales data then should suggest that higher prices are correlated with higher quantity sold, biasing the coefficient of the Price-Quantity relationship, i.e., $e$.
 
 ### The IV algorithm of causal inference
-We want to estimate the response of market demand to exogenous changes in market price. We do this by addressing the potential endogeneity in $Price$ by including an IV in the system of equation. The IV need to be correlated with $Price$, but should not directly affect the quantity demanded $Quantity$. It allows us to generate an exogenous variation *only* in the endogenous regressor $Price$, facilitating the assessment of the impact of $Price$ on $Quantity$ of the product.  
-Such variables are not always easily available and many times require us to conduct costly experiments. 
+We want to estimate the response of market demand to exogenous changes in market price. We do this by addressing the potential endogeneity in $Price$ by including an IV in the system of equation. The IV need to be correlated with $Price$, but should not directly affect the quantity demanded $Quantity$. It allows us to generate an exogenous variation *only* in the endogenous regressor $Price$, facilitating the assessment of the impact of $Price$ on $Quantity$ of the product. Such variables are not always easily available and many times require us to conduct costly experiments. 
 
 We use the IV, a third variable, in the regression analysis when we have endogenous variables, e.g., $Price$. 
 Among others, two main conditions need to be met for the IV to help us identify the causal influence of $Price$ on $Quantity$. 
-> 1. The IV is highly correlated with the endogenous variable --> see first-stage regression.
-> 2. The IV is uncorrelated with the error term $\epsilon$ and affects the dependent variable $Quantity$ only through its influence on the endogenous variable --> no formal tests exist to demonstrate that this condition is met.
-
+> 1. The IV is highly correlated with the endogenous regressor (i.e., $Cov(Price, IV)$ $\neq$ $0$) --> see first-stage regression.
+> 2. *Exclusion restriction* assumption (i.e., $Cov(IV, \\epsilon\)=0$): The IV is uncorrelated with the error term $\(\epsilon\)$ and affects the dependent variable $Quantity$ only through its influence on the endogenous variable. This condition ensures no direct correlation paths exist between $IV$ and $Quantity$, and any impact $IV$ has on the $Quantity$ must pass through the endogenous regressor $Price$. Unfortunately, no formal tests exist to demonstrate that this condition is met, but many plausible and economically sensible arguments are often made to support that this assumption holds.
 
 The estimation takes place in two steps:
 > 1. First, we regress the IV variable on the endogenous regressor.  
@@ -70,7 +67,9 @@ $$ \log{}Quantity = \gamma_0 + e_c\log{}(\hat{Price}) + v$$
 
 >> The $e_c$ in the above equation is our causal estimate of the price elasticity of demand.
 
-We install the Python library *linearmodels* (IV2SLS module) that performs both these steps using a single command. For its implementation using Python, *see* [code_price_elasticity.ipynb](https://github.com/sumitdeole/price_elasticity/blob/main/code_price_elasticity.ipynb)
+We install the Python library *linearmodels* (IV2SLS module) that performs both these steps using a single command. 
+
+**For the estimation of the price elasticity using Python, *see* [code_price_elasticity.ipynb](https://github.com/sumitdeole/price_elasticity/blob/main/code_price_elasticity.ipynb)**
 
 
 ## References
